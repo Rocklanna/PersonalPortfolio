@@ -1,0 +1,202 @@
+/*
+default document font size is 16px
+1 rem=16px
+100%=16px
+To change the document font size
+e.g to 10px
+(100/16) * 10 = 62.5%
+so 62.5% = 10px
+10px = 1rem
+put this in the html tag to make it the default document tag 
+
+*/
+:root{
+  --red-color:#80002a;
+  --black-color: #262626; 
+  --white-color: #ffffff;
+  --blue-color:#4d4dff;
+  --orange-color:#ff6600;
+}
+*,*::before,*::after{
+   box-sizing:border-box;
+}
+*{
+  margin:0;
+  padding:0;
+}
+html{
+  font-size:62.5%;
+  scroll-behavior: smooth;
+  color: var(--white-color);
+}
+nav{
+  width:100%;
+  display:flex;
+  justify-content:flex-end;
+   background-color: var(--red-color);
+   position:fixed;
+  top:0;
+  left:0;
+}
+ul{
+  display:flex;
+  list-style-type:none;
+  overflow:hidden;
+   }
+li a{
+  display:block;
+  text-decoration:none;
+  color:var(--white-color);
+  font-size:2rem;
+  padding:2rem;
+ /* border:2px solid red;*/
+ }
+.navlink:hover{
+  background-color:var(--blue-color);
+ }
+#welcome-section{
+  background-color:var(--black-color);
+  height:100vh;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+h1{
+  font-size:6rem;
+  font-family:Arial;
+  color:var(--white-color);
+  margin-bottom:0;
+ }
+#whoami{
+  font-size:3rem;
+  color:var(--red-color);
+  margin-top:0;
+  font-family:Verdana;
+}
+#projects{
+ background-color:var(--blue-color);
+}
+#projectsdiv{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap:4rem;
+  width:100%;
+  max-width:1280px;
+  margin:4rem auto 2rem auto;
+  }
+#heading{
+  max-width:400px;
+  margin:auto;
+  border-bottom: 3px solid var(--white-color);
+  font-size:3rem;
+  color:var(--white-color);
+  text-align:center;
+  padding-top:2%;
+  line-height:1.3;
+}
+.project-tile{
+  background-color:var(--black-color);
+  text-align:center;
+   }
+.link{
+  text-align:center;
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  font-size:2rem;
+  font-family:Arial;
+}
+.imglink{
+  width:100%;
+  height:80%;
+  margin-bottom:5%;
+  object-fit:cover;
+}
+.projecttitle{
+  padding-bottom:2rem;
+}
+.symbol{
+  color:var(--black-color);
+}
+.link:hover .symbol{
+  color:var(--orange-color); 
+}
+#showalldiv{
+  max-width:100%;
+  text-align:center;
+  padding:10rem;
+}
+#showall{
+  background-color:var(--black-color);
+  padding:1rem;
+  text-decoration:none;
+  color:white;
+  font-family:Arial;
+  font-weight:bold;
+  font-size:2rem;
+}
+#showall:hover{
+  background-color:var(--red-color); 
+}
+#contact{
+  background-color:var(--black-color);;
+  color:var(--white-color);
+  font-size:2rem;
+  margin-top:-4%;
+  text-align:center;
+}
+#letswork{
+  font-size:5rem;
+  font-weight:bold;  
+  padding-top:12%;
+  font-family:Arial;
+  line-height:1.4;
+}
+#coffee{
+  font-style:italic;
+  font-family:Arial;
+  }
+#contactlinks{
+  display:flex;
+  margin-top:3%;
+  padding-bottom:12%;
+  justify-content:center; 
+  flex-wrap:wrap;
+  }
+.contactway{
+  display:block;
+  color:var(--white-color);
+  font-size:2rem;
+  padding:2rem 2rem;
+  text-decoration:none;
+  transition: transform 0.3s ease-out;
+}
+.contactway > i{
+  margin-right:5px;
+}
+.contactway:hover{
+   transform: translateY(10px);
+}
+footer{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding: 2rem 15rem;
+  border-top:2px solid var(--red-color);
+  background-color: var(--black-color);
+  text-decoration:none;
+  font-size:2rem;
+}
+@media(max-width:480px){
+  
+  footer{
+  flex-direction:row;
+  text-align:center;
+  }  
+}
+#sitelink{
+  text-decoration:none;
+  color:var(--white-color);
+}
